@@ -1,0 +1,1 @@
+web: gunicorn grapicalpassword.wsgi --log-file -
