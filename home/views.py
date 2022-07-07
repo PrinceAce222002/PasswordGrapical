@@ -1,10 +1,5 @@
-from ast import Param
 import math
-from multiprocessing import context
-import re
-import secrets
-from turtle import Turtle
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.models import User
@@ -12,11 +7,9 @@ from graphical_pwd_auth.settings import EMAIL_HOST_PASSWORD, N, TBA, EMAIL_HOST_
 from .models import LoginInfo
 import random, uuid
 from urlparams.redirect import param_redirect
-import email
 from email.message import EmailMessage
 import ssl
 import smtplib
-from os import urandom
 from Crypto.Cipher import AES
 import string
 import base64
