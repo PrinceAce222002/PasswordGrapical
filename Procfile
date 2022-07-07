@@ -1,1 +1,1 @@
-web: gunicorn grapicalpassword.wsgi --log-file -
+web: gunicorn graphical_pwd_auth.wsgi --log-file -
