@@ -170,7 +170,7 @@ def sendLoginLinkMailToUser(username):
             Someone tried to bruteforce on your account.
             Click the Link to Login to your account directly.
             The link is one-time clickable
-            link: http://{}:8000/login/{}
+            link: http://{}/login/{}
             '''.format(ALLOWED_HOSTS[-1], link)
         em = EmailMessage()
         em['From'] = email_sender
@@ -204,7 +204,7 @@ def sendPasswordResetLinkToUser(username):
     body='''
         Click the Link to reset your password.
         The link is one-time clickable
-        link: http://{}:8000/reset/{}
+        link: http://{}/reset/{}
         '''.format(ALLOWED_HOSTS[-1], link)
     em = EmailMessage()
     em['From'] = email_sender
