@@ -202,10 +202,9 @@ def sendPasswordResetLinkToUser(username):
     email_reciever= user.email
     subject ='Link to Log in to your account'
     body='''
-        Someone tried to bruteforce on your account.
-        Click the Link to Login to your account directly.
+        Click the Link to reset your password.
         The link is one-time clickable
-        link: http://{}:8000/login/{}
+        link: http://{}:8000/reset/{}
         '''.format(ALLOWED_HOSTS[-1], link)
     em = EmailMessage()
     em['From'] = email_sender
