@@ -23,6 +23,49 @@
         body::-webkit-scrollbar {
             display: none;
         }
+        /*REGISTER MOVING PAGE */
+        /* body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            } */
+            .main {
+                display: flex;
+                overflow: hidden;
+                background: rgba(0,0,0,0.5);
+                height: 300px;
+            }
+            .main img {
+            max-width: 100%;
+            vertical-align: middle;
+            border: 2px solid white;
+            box-sizing: border-box;
+            transition: opacity .2s;
+            }
+            .main:hover img {
+            opacity: 0.5;
+            }
+            .main img:hover {
+            opacity: 1;
+            }
+            .main .single-column {
+            animation: var(--animation, none) 16s infinite linear;
+            }
+            .main .single-column:hover {
+            animation-play-state: paused;
+            }
+            .main .single-column:nth-of-type(odd) {
+            align-self: flex-end;
+            --direction: 50%;
+            }
+            @keyframes slide {
+            to {
+                -webkit-transform: translateY(var(--direction, -50%));
+                        transform: translateY(var(--direction, -50%));
+            }
+            }
 /* 
         This is for the after login page  */
             #myImg {
@@ -108,6 +151,26 @@ LOGIN PAGE OVER */
         .no-gutters {
             margin-right: 30px;
             margin-left: 0;
+        }
+        .btn-primary{
+            color: black;
+            background-color: antiquewhite;
+            border-color: antiquewhite;
+        }
+        .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+            color: antiquewhite;
+            background-color: rgba(0,0,0,0.5);
+            border-color: antiquewhite;
+        }
+        .btn-primary:hover {
+            color: antiquewhite;
+            background-color: rgba(0,0,0,0.5);
+            border-color: antiquewhite;
+        }
+        li{
+            padding: 10px ;
+            float: left;
+            width: 50%;
         }
         .btn-outline-info {
             color: antiquewhite;
@@ -273,6 +336,7 @@ LOGIN PAGE OVER */
                     <a href="{% url 'register_new' %}">Register Pattern</a>
                     <a href="{% url 'register_graphical' %}">Register Graphical</a>
                     <a href="{% url 'register_story' %}">Register Story</a>
+                    <a href="{% url 'register_moving' %}">Register Moving</a>
                 </div>
             </button>
             </div> 
